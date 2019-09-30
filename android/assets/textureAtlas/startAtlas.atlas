@@ -1,0 +1,27 @@
+
+startAtlas.png
+size: 2048,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+bgStart
+  rotate: false
+  xy: 2, 176
+  size: 1280, 725
+  orig: 1280, 725
+  offset: 0, 0
+  index: -1
+btnStart
+  rotate: false
+  xy: 2, 2
+  size: 402, 172
+  orig: 402, 172
+  offset: 0, 0
+  index: -1
+logoStart
+  rotate: false
+  xy: 1284, 530
+  size: 345, 371
+  orig: 345, 371
+  offset: 0, 0
+  index: -1
