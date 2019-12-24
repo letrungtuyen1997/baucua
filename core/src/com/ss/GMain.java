@@ -10,7 +10,6 @@ import com.ss.core.util.GDirectedGame;
 import com.ss.core.util.GScreen;
 import com.ss.core.util.GStage;
 import com.ss.core.util.GStage.StageBorder;
-import com.ss.gameLogic.scene.GMenu;
 import com.ss.scene.gamePlay;
 import com.ss.scene.startSence;
 
@@ -85,11 +84,7 @@ public class GMain
       }
     });
   }
-  
-  public static GScreen menuScreen()
-  {
-    return new GMenu();
-  }
+
 
   public void create()
   {

@@ -448,7 +448,6 @@ public class gamePlay extends GScreen {
                 OverLayMonney.setVisible(false);
                 eventMonney(monney,OverLayMonney);
 
-
             }
 
     }
@@ -915,7 +914,7 @@ public class gamePlay extends GScreen {
         }
     }
     void showAds(){
-        if(countShowAds==10){
+        if(countShowAds==5){
             GMain.platform.ShowFullscreen();
             countShowAds=0;
         }
@@ -937,39 +936,39 @@ public class gamePlay extends GScreen {
         float h = frameClearArr.get(0).getHeight()/2;
 
         if(quanlityNai>1){
-            Label nai = new Label((quanlityNai-1)+"",new Label.LabelStyle(fontText,Color.BLUE));
+            Label nai = new Label((quanlityNai-1)+"",new Label.LabelStyle(fontText,Color.GREEN));
             nai.setPosition(frameClearArr.get(0).getX()+w,frameClearArr.get(0).getY()+h,Align.center);
             groupLable.addActor(nai);
         }
         if(quanlityBau>1){
-            Label bau = new Label((quanlityBau-1)+"",new Label.LabelStyle(fontText,Color.BLUE));
+            Label bau = new Label((quanlityBau-1)+"",new Label.LabelStyle(fontText,Color.GREEN));
             bau.setPosition(frameClearArr.get(1).getX()+w,frameClearArr.get(1).getY()+h,Align.center);
             groupLable.addActor(bau);
 
         }
         if(quanlityGa>1){
-            Label ga = new Label((quanlityGa-1)+"",new Label.LabelStyle(fontText,Color.BLUE));
+            Label ga = new Label((quanlityGa-1)+"",new Label.LabelStyle(fontText,Color.GREEN));
             ga.setPosition(frameClearArr.get(2).getX()+w,frameClearArr.get(2).getY()+h,Align.center);
             groupLable.addActor(ga);
 
 
         }
         if(quanlityCa>1){
-            Label ca = new Label((quanlityCa-1)+"",new Label.LabelStyle(fontText,Color.BLUE));
+            Label ca = new Label((quanlityCa-1)+"",new Label.LabelStyle(fontText,Color.GREEN));
             ca.setPosition(frameClearArr.get(3).getX()+w,frameClearArr.get(3).getY()+h,Align.center);
             groupLable.addActor(ca);
 
 
         }
         if(quanlityCua>1){
-            Label cua = new Label((quanlityCua-1)+"",new Label.LabelStyle(fontText,Color.BLUE));
+            Label cua = new Label((quanlityCua-1)+"",new Label.LabelStyle(fontText,Color.GREEN));
             cua.setPosition(frameClearArr.get(4).getX()+w,frameClearArr.get(4).getY()+h,Align.center);
             groupLable.addActor(cua);
 
 
         }
         if(quanlityTom>1){
-            Label tom = new Label(""+(quanlityTom-1),new Label.LabelStyle(fontText,Color.BLUE));
+            Label tom = new Label(""+(quanlityTom-1),new Label.LabelStyle(fontText,Color.GREEN));
             tom.setPosition(frameClearArr.get(5).getX()+w,frameClearArr.get(5).getY()+h,Align.center);
             groupLable.addActor(tom);
 

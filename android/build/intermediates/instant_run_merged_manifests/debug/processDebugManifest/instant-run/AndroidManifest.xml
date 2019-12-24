@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jkstudiogroup.template"
-    android:versionCode="1"
-    android:versionName="1.0" >
+    package="jk.baucua"
+    android:versionCode="2"
+    android:versionName="2.0" >
 
     <uses-sdk
         android:minSdkVersion="14"
@@ -107,7 +107,7 @@
 
         <provider
             android:name="com.google.firebase.provider.FirebaseInitProvider"
-            android:authorities="com.jkstudiogroup.template.firebaseinitprovider"
+            android:authorities="jk.baucua.firebaseinitprovider"
             android:exported="false"
             android:initOrder="100" /> <!-- Include the AdActivity and InAppPurchaseActivity configChanges and themes. -->
         <activity
@@ -118,7 +118,7 @@
 
         <provider
             android:name="com.google.android.gms.ads.MobileAdsInitProvider"
-            android:authorities="com.jkstudiogroup.template.mobileadsinitprovider"
+            android:authorities="jk.baucua.mobileadsinitprovider"
             android:exported="false"
             android:initOrder="100" />
 
@@ -134,7 +134,7 @@
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
-            android:authorities="com.jkstudiogroup.template.com.android.tools.ir.server.InstantRunContentProvider"
+            android:authorities="jk.baucua.com.android.tools.ir.server.InstantRunContentProvider"
             android:multiprocess="true" />
     </application>
 

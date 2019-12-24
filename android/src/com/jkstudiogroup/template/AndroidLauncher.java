@@ -33,6 +33,8 @@ import com.ss.GMain;
 
 import java.util.Locale;
 
+import jk.baucua.R;
+
 public class AndroidLauncher extends AndroidApplication {
 
 	FrameLayout rootView;

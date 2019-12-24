@@ -24,9 +24,12 @@ public class VideoAds {
     TextureAtlas textureAtlas;
     Group group = new Group();
     Group group1 = new Group();
+    Group group2 = new Group();
+
     public VideoAds(TextureAtlas textureAtlas){
         GStage.addToLayer(GLayer.top,group1);
         GStage.addToLayer(GLayer.top,group);
+        GStage.addToLayer(GLayer.top,group2);
         this.textureAtlas = textureAtlas;
         showFrame();
 
@@ -47,10 +50,21 @@ public class VideoAds {
         Image btnClose = GUI.createImage(textureAtlas,"Skip");
         btnClose.setPosition(0,btnClose.getHeight()*2-20,Align.center);
         group.addActor(btnClose);
+        //////////////////// notice//////////
+        group2.setPosition(-250, GMain.screenHeight/2, Align.center);
+        group2.setOrigin(Align.center);
+        Image Panel2 = GUI.createImage(textureAtlas,"panelAdsFail");
+        Panel2.setPosition(0,0,Align.center);
+        group2.addActor(Panel2);
+        Image btnClose2 = GUI.createImage(textureAtlas,"Skip");
+        btnClose2.setPosition(0,btnClose2.getHeight()*2-20,Align.center);
+        group2.addActor(btnClose2);
+
         ///////// event/////////
         Tweens.setTimeout(group,0.5f,()->{
             eventBtnWatch(btnWatch);
             eventBtnClose(btnClose);
+            eventBtnClose2(btnClose2);
         });
 
         //////// action///////
@@ -86,6 +100,20 @@ public class VideoAds {
             }
         });
 
+    } void eventBtnClose2(Image btn){
+        btn.addListener(new ClickListener(){
+            @Override
+            public void clicked(InputEvent event, float x, float y) {
+                super.clicked(event, x, y);
+                SoundEffect.Play(SoundEffect.panelOut);
+                btn.setTouchable(Touchable.disabled);
+                group2.addAction(Actions.moveTo(1500,GMain.screenHeight/2,0.5f, Interpolation.swingIn));
+                Tweens.setTimeout(group,0.5f,()->{
+                    group2.clear();
+                });
+            }
+        });
+
     }
     void showAds(){
         if(GMain.platform.isVideoRewardReady()){
@@ -102,6 +130,17 @@ public class VideoAds {
                 }
 
             });
+        }else {
+            group.clear();
+            group1.clear();
+            group2.addAction(Actions.moveTo(GMain.screenWidth/2,GMain.screenHeight/2,0.5f, Interpolation.swingOut));
+            gamePlay.MyMoney +=50000;
+            gamePlay.OldMonney = gamePlay.MyMoney;
+            gamePlay.MyMonneyLabel.setText(FortmartPrice(gamePlay.MyMoney));
+//            group2.addAction(Actions.moveTo(1500,GMain.screenHeight/2,0.5f, Interpolation.swingIn));
+//            Tweens.setTimeout(group2,0.5f,()->{
+//               group2.clear();
+//            });
         }
     }
     private String FortmartPrice(Long Price) {
